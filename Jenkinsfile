@@ -22,7 +22,7 @@ node {
       def resourceGroup = 'ManiRG1'
       def webAppName = 'webapp-24'
       // login Azure
-      withCredentials([usernamePassword(credentialsId: 'ManiSP2', passwordVariable: 'A~QFyY_ZL.XR~as7nAaa2bJl349ldgin8O', usernameVariable: '3b24d29e-d14c-44ce-9068-ed7d3cea0b24')]) {
+      withCredentials([usernamePassword(credentialsId: 'AzureServicePrincipal', passwordVariable: 'A~QFyY_ZL.XR~as7nAaa2bJl349ldgin8O', usernameVariable: '3b24d29e-d14c-44ce-9068-ed7d3cea0b24')]) {
        sh '''
           az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
           az account set -s $AZURE_SUBSCRIPTION_ID
