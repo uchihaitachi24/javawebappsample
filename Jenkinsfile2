@@ -6,8 +6,8 @@ def getAcrLoginServer(def acrSettingsJson) {
 }
 
 node {
- withEnv(['AZURE_SUBSCRIPTION_ID=767b9702-2a7a-4d81-9385-f20dc1e4a525',
-        'AZURE_TENANT_ID=7ca678f4-1a9d-46d2-89e5-c3e25d40e7da']) {
+ withEnv(['AZURE_SUBSCRIPTION_ID=7ca678f4-1a9d-46d2-89e5-c3e25d40e7da',
+        'AZURE_TENANT_ID=767b9702-2a7a-4d81-9385-f20dc1e4a525']) {
     stage('init') {
       checkout scm
     }
